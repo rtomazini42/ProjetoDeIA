@@ -67,11 +67,11 @@ Abaixo temos os resultados obtidos, juntamente com uma contagem de tempo de exec
 
 ## Resultados dos testes de acuracia e tempo:
 |NaiveBayes|
-NaiveBayes testando na curadoria humana
+|NaiveBayes testando na curadoria humana|
 --------------------------------------
-Acurácia média da 1ª repetição: 0.6660210669384982
+|Acurácia média da 1ª repetição:| |0.6660210669384982|
 --------------------------------------
-Acurácia média da 2ª repetição: 0.6660210669384982
+|Acurácia média da 2ª repetição:| |0.6660210669384982|
 --------------------------------------
 Acurácia média da 3ª repetição: 0.6660210669384982
 --------------------------------------
