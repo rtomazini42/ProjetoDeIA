@@ -6,6 +6,7 @@
 
 #### MATERIAL A SER ENTREGUE AO PROFESSOR:
 
+
 ##### Um relatório deve ser gerado de acordo com a especificação abaixo:
 * O relatório deve seguir o formato de um artigo acadêmico, em suas partes 
  1. título 🪛
@@ -31,6 +32,7 @@
 * BASE DE DADOS ✔️ 
 * PRÉ-PROCESSAMENTO ✔️
 * EXPERIMENTOS E ANÁLISE DOS RESULTADOS ✔️ 
+##### Resultados e explicações do porjeto em resultados.md
 
 
 ✔️ -> Feito
