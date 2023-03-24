@@ -65,22 +65,50 @@ Na terceira parte, o script usa o algoritmo KNN para classificar os textos em um
 Abaixo temos os resultados obtidos, juntamente com uma contagem de tempo de execução.
 
 
-## Resultados dos testes de acuracia e tempo:
-|NaiveBayes|
-|NaiveBayes testando na curadoria humana|
+## Resultados dos testes de acuracia e tempo
+
+| Algoritmo      | Base de dados               | Acurácia média 1ª repetição | Acurácia média 2ª repetição | Acurácia média 3ª repetição | Acurácia média 4ª repetição | Acurácia média 5ª repetição | Tempo total de execução |
+| --------------| --------------------------- | --------------------------| ---------------------------| ---------------------------| ---------------------------| ---------------------------| ------------------------|
+| NaiveBayes     | Curadoria humana            | 0.6660210669384982         | 0.666021066938498          | 0.6660210669384982         | 0.6660210669384982         | 0.666021066938498          | 1679672086.7249763 seg   |
+| NaiveBayes     | Classificação NLTK          | 0.88065749235474           | 0.88065749235474            | 0.88065749235474            | 0.88065749235474            | 0.88065749235474            | 1679672086.8631966 seg   |
+| KNN            | Curadoria humana - KNN=3    | 0.6040519877675842         | 0.6040519877675842          | 0.6040519877675842          | 0.6040519877675842          | 0.6040519877675842          | 1679672087.1218078 seg   |
+| KNN            | Curadoria humana - KNN=5    | 0.6012742099898063         | 0.6012742099898063          | 0.6012742099898063          | 0.6012742099898063          | 0.6012742099898063          | 1679672087.352609 seg    |
+| KNN            | Curadoria humana - KNN=7    | 0.5939007815154604         | 0.5939007815154604          | 0.5939007815154604          | 0.5939007815154604          | 0.5939007815154604          | 1679672087.601194 seg    |
+| KNN            | Classificação NLTK - KNN=3  | 0.8889823309548082         | 0.8889823309548082          | 0.8889823309548082          | 0.8889823309548082          | 0.8889823309548082          | 1679672087.8299298 seg  |
+| KNN            | Classificação NLTK - KNN=5  | 0.8778797145769621         | 0.8778797145769621          | 0.8778797145769621          | 0.8778797145769621          | 0.8778797145769621          | 1679672088.0604086 seg  |
+| KNN            | Classificação NLTK - KNN=7  | 0.8686289500509684         | 0.8686289500509684          | 0.8686289500509684          | 0.8686289500509684          | 0.8686289500509684          | 1679672088.305
+
+Árvore de decisão
 --------------------------------------
-|Acurácia média da 1ª repetição:| |0.6660210669384982|
+Árvore de decisão para curadoria humana
+Acurácia média da 1ª repetição: 0.5762487257900102
+Acurácia média da 2ª repetição: 0.5929323819232076
+Acurácia média da 3ª repetição: 0.5957016649677199
+Acurácia média da 4ª repetição: 0.590137614678899
+Acurácia média da 5ª repetição: 0.599413863404689
+
+Tempo total de execução: 1679672089.245056 segundos
+
 --------------------------------------
-|Acurácia média da 2ª repetição:| |0.6660210669384982|
---------------------------------------
+Árvore de decisão para NLTK
+Acurácia média da 1ª repetição: 0.9722392116887528
+Acurácia média da 2ª repetição: 0.9768688413183824
+Acurácia média da 3ª repetição: 0.9759429153924566
+Acurácia média da 4ª repetição: 0.9694614339109752
+Acurácia média da 5ª repetição: 0.9759429153924566
+
+Tempo total de execução: 1679672089.7561336 segundos
+
+
+
+NaiveBayes
+NaiveBayes testando na curadoria humana
+Acurácia média da 1ª repetição:0.6660210669384982
+Acurácia média da 2ª repetição:0.666021066938498
 Acurácia média da 3ª repetição: 0.6660210669384982
---------------------------------------
 Acurácia média da 4ª repetição: 0.6660210669384982
---------------------------------------
-Acurácia média da 5ª repetição: 0.6660210669384982
---------------------------------------
+Acurácia média da 5ª repetição: 0.666021066938498
 Tempo total de execução: 1679672086.7249763 segundos
---------------------------------------
 --------------------------------------
 NaiveBayes testando na classificação NLTK
 Acurácia média da 1ª repetição: 0.88065749235474
@@ -88,9 +116,8 @@ Acurácia média da 2ª repetição: 0.88065749235474
 Acurácia média da 3ª repetição: 0.88065749235474
 Acurácia média da 4ª repetição: 0.88065749235474
 Acurácia média da 5ª repetição: 0.88065749235474
-####################################################
-#Tempo total de execução: 1679672086.8631966 segundos#
-####################################################
+Tempo total de execução: 1679672086.8631966 segundos
+
 --------------------------------------
 +++KNN+++
 --------------------------------------
@@ -100,9 +127,8 @@ Acurácia média da 2ª repetição: 0.6040519877675842
 Acurácia média da 3ª repetição: 0.6040519877675842
 Acurácia média da 4ª repetição: 0.6040519877675842
 Acurácia média da 5ª repetição: 0.6040519877675842
-####################################################
-#Tempo total de execução: 1679672087.1218078 segundos#
-####################################################
+Tempo total de execução: 1679672087.1218078 segundos
+
 --------------------------------------
 KNN testando na curadoria humana com KNN = 5
 Acurácia média da 1ª repetição: 0.6012742099898063
@@ -110,9 +136,8 @@ Acurácia média da 2ª repetição: 0.6012742099898063
 Acurácia média da 3ª repetição: 0.6012742099898063
 Acurácia média da 4ª repetição: 0.6012742099898063
 Acurácia média da 5ª repetição: 0.6012742099898063
-####################################################
-#Tempo total de execução: 1679672087.352609 segundos#
-####################################################
+Tempo total de execução: 1679672087.352609 segundos
+
 --------------------------------------
 KNN testando na curadoria humana com KNN = 7
 Acurácia média da 1ª repetição: 0.5939007815154604
@@ -120,9 +145,8 @@ Acurácia média da 2ª repetição: 0.5939007815154604
 Acurácia média da 3ª repetição: 0.5939007815154604
 Acurácia média da 4ª repetição: 0.5939007815154604
 Acurácia média da 5ª repetição: 0.5939007815154604
-####################################################
-#Tempo total de execução: 1679672087.601194 segundos#
-####################################################
+Tempo total de execução: 1679672087.601194 segundos
+
 --------------------------------------
 --------------------------------------
 KNN testando na NLTK com KNN = 3
@@ -131,9 +155,8 @@ Acurácia média da 2ª repetição: 0.8889823309548082
 Acurácia média da 3ª repetição: 0.8889823309548082
 Acurácia média da 4ª repetição: 0.8889823309548082
 Acurácia média da 5ª repetição: 0.8889823309548082
-####################################################
-#Tempo total de execução: 1679672087.8299298 segundos#
-####################################################
+Tempo total de execução: 1679672087.8299298 segundos
+
 --------------------------------------
 KNN testando na NLTK com KNN = 5
 Acurácia média da 1ª repetição: 0.8778797145769621
@@ -141,9 +164,9 @@ Acurácia média da 2ª repetição: 0.8778797145769621
 Acurácia média da 3ª repetição: 0.8778797145769621
 Acurácia média da 4ª repetição: 0.8778797145769621
 Acurácia média da 5ª repetição: 0.8778797145769621
-####################################################
-#Tempo total de execução: 1679672088.0604086 segundos#
-####################################################
+
+Tempo total de execução: 1679672088.0604086 segundos
+
 --------------------------------------
 KNN testando na NLTK com KNN = 7
 Acurácia média da 1ª repetição: 0.8686289500509684
@@ -151,9 +174,9 @@ Acurácia média da 2ª repetição: 0.8686289500509684
 Acurácia média da 3ª repetição: 0.8686289500509684
 Acurácia média da 4ª repetição: 0.8686289500509684
 Acurácia média da 5ª repetição: 0.8686289500509684
-####################################################
-#Tempo total de execução: 1679672088.2850685 segundos#
-####################################################
+
+Tempo total de execução: 1679672088.2850685 segundos
+
 --------------------------------------
 Árvore de decisão
 --------------------------------------
@@ -163,9 +186,9 @@ Acurácia média da 2ª repetição: 0.5929323819232076
 Acurácia média da 3ª repetição: 0.5957016649677199
 Acurácia média da 4ª repetição: 0.590137614678899
 Acurácia média da 5ª repetição: 0.599413863404689
-####################################################
-#Tempo total de execução: 1679672089.245056 segundos#
-####################################################
+
+Tempo total de execução: 1679672089.245056 segundos
+
 --------------------------------------
 Árvore de decisão para NLTK
 Acurácia média da 1ª repetição: 0.9722392116887528
@@ -173,9 +196,9 @@ Acurácia média da 2ª repetição: 0.9768688413183824
 Acurácia média da 3ª repetição: 0.9759429153924566
 Acurácia média da 4ª repetição: 0.9694614339109752
 Acurácia média da 5ª repetição: 0.9759429153924566
-####################################################
-#Tempo total de execução: 1679672089.7561336 segundos#
-####################################################
+
+Tempo total de execução: 1679672089.7561336 segundos
+
 
 
 ## Resultados
@@ -187,3 +210,4 @@ A árvore de decisão treinada com o NLTK obteve uma acurácia muito maior do qu
 É importante destacar que o tempo de execução em segundos é o mesmo para todos os testes, o que sugere que não houve variação significativa no tempo de execução entre os classificadores e bases de dados utilizados.
 
 Vale lembrar que a escolha do algoritmo de classificação e dos parâmetros a serem utilizados pode depender do problema em questão e dos dados disponíveis, e que esses resultados podem não ser generalizáveis para outras aplicações.
+
