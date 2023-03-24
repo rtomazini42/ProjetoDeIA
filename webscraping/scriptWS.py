@@ -3,7 +3,7 @@ import os
 import csv
 
 # Definir as credenciais de acesso à API do Twitter
-bearer_token = "nope" 
+bearer_token = "AAAAAAAAAAAAAAAAAAAAAOtTyQAAAAAAm%2Fg9kbOa8s%2BEq%2Fn5nWqlKE%2BLi90%3DRc0OO4DE8zbePyrHKIsV2etNFWZGBxU4YKuITJ46p0jcGHBjKy" 
 #se vc for minha colega Lidiane pode me pedir o bearer_token. Se você for outra pessoa por favor vá causar prejuízos pra Big Techs e não pra gente.
 
 
@@ -22,7 +22,8 @@ def busca(query, max_results=100):
 	# Configurar os parâmetros da solicitação
 	params = {
 		"query": query,
-		"max_results": max_results
+		"max_results": max_results,
+        "tweet.fields": "lang"
 	}
 
 	# Enviar a solicitação para a API do Twitter
@@ -35,14 +36,15 @@ def busca(query, max_results=100):
 		# Gravar tweets
 		with open(query + "tweets.csv", "w", newline="", encoding="utf-8") as csvfile:
 			writer = csv.writer(csvfile)
-			writer.writerow(["id", "texto", "author_id"])
+			writer.writerow(["id", "texto", "author_id", "sentimento"])
 			for tweet in data:
-				print([tweet.get("id"), tweet.get("text"), tweet.get("author_id")])
-				writer.writerow([tweet.get("id"), tweet.get("text"), tweet.get("author_id")])
+				if tweet.get("lang") == "pt":
+					print([tweet.get("id"), tweet.get("text"), tweet.get("author_id")])
+					writer.writerow([tweet.get("id"), tweet.get("text"), tweet.get("author_id"),"vazio"])
 	else:
 		print("Erro ao buscar tweets:", response.status_code)
 
-lista = ["Recife", "Pernambuco", "Camaragibe","Olinda", "UFRPE", "UFPE", "@prefrecife","APAC", "@SantaCruzFC", "@sportrecife", "@nauticope", "@recifeordinario"]
+lista = ["Recife", "Pernambuco", "Camaragibe","Olinda", "UFRPE", "UFPE", "@prefrecife","APAC", "@SantaCruzFC", "@sportrecife", "@nauticope", "@recifeordinario","@nautiluslink","@mimimidias","CLT"]
 for palavra in lista:
 	busca(palavra)
 
