@@ -1,5 +1,21 @@
-#NaiveBayes testando na curadoria humana
 
+import time #para os calculos de tempo
+
+start_time = 0
+end_time = 0
+
+def comeca_contagem():
+    start_time = time.time()
+
+
+def termina_contagem():
+    end_time = time.time()
+    total_time = end_time - start_time
+
+    # exibe o tempo total de execução
+    print("####################################################")
+    print(f"#Tempo total de execução: {total_time} segundos#")
+    print("####################################################")
 
 import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
@@ -9,12 +25,16 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
 #from sklearn.metrics import f1_score
 
+
+
 print("+++NaiveBayes+++")
+#NaiveBayes testando na curadoria humana
 print("NaiveBayes testando na curadoria humana")
 # Leitura do arquivo
 df = pd.read_csv('arquivoResultadoAtualizado.csv')
 
 # Pré-processamento dos dados
+comeca_contagem()
 vectorizer = CountVectorizer()
 X = vectorizer.fit_transform(df['texto'].values.astype('U'))
 y = df['sentimento'].values
@@ -38,7 +58,7 @@ for i in range(num_repeticoes):
 
     print(f"Acurácia média da {i+1}ª repetição: {acuracia_media}")
 #    print(f"F1-score médio da {i+1}ª repetição: {f1_score_medio}")
-
+termina_contagem()
 
 print("--------------------------------------")
 
@@ -50,6 +70,7 @@ print("NaiveBayes testando na classificação NLTK")
 df = pd.read_csv('arquivoResultadoAtualizado.csv')
 
 # Pré-processamento dos dados
+comeca_contagem()
 vectorizer = CountVectorizer()
 X = vectorizer.fit_transform(df['texto'].values.astype('U'))
 y = df['sentimentoNLTK'].values
@@ -73,7 +94,7 @@ for i in range(num_repeticoes):
 
     print(f"Acurácia média da {i+1}ª repetição: {acuracia_media}")
 #    print(f"F1-score médio da {i+1}ª repetição: {f1_score_medio}")
-
+termina_contagem()
 
 print("--------------------------------------")
 print("+++KNN+++")
@@ -87,6 +108,7 @@ print("KNN testando na curadoria humana com KNN = 3")
 df = pd.read_csv('arquivoResultadoAtualizado.csv')
 
 # Pré-processamento dos dados
+comeca_contagem()
 vectorizer = CountVectorizer()
 X = vectorizer.fit_transform(df['texto'].values.astype('U'))
 y = df['sentimento'].values
@@ -110,7 +132,7 @@ for i in range(num_repeticoes):
 
     print(f"Acurácia média da {i+1}ª repetição: {acuracia_media}")
 #    print(f"F1-score médio da {i+1}ª repetição: {f1_score_medio}")
-
+termina_contagem()
 
 
 print("--------------------------------------")
@@ -123,6 +145,7 @@ print("KNN testando na curadoria humana com KNN = 5")
 df = pd.read_csv('arquivoResultadoAtualizado.csv')
 
 # Pré-processamento dos dados
+comeca_contagem()
 vectorizer = CountVectorizer()
 X = vectorizer.fit_transform(df['texto'].values.astype('U'))
 y = df['sentimento'].values
@@ -147,7 +170,7 @@ for i in range(num_repeticoes):
     print(f"Acurácia média da {i+1}ª repetição: {acuracia_media}")
 #    print(f"F1-score médio da {i+1}ª repetição: {f1_score_medio}")
 
-
+termina_contagem()
 
 print("--------------------------------------")
 
@@ -159,6 +182,7 @@ print("KNN testando na curadoria humana com KNN = 7")
 df = pd.read_csv('arquivoResultadoAtualizado.csv')
 
 # Pré-processamento dos dados
+comeca_contagem()
 vectorizer = CountVectorizer()
 X = vectorizer.fit_transform(df['texto'].values.astype('U'))
 y = df['sentimento'].values
@@ -182,7 +206,7 @@ for i in range(num_repeticoes):
 
     print(f"Acurácia média da {i+1}ª repetição: {acuracia_media}")
 #    print(f"F1-score médio da {i+1}ª repetição: {f1_score_medio}")
-
+termina_contagem()
 
 print("--------------------------------------")
 
@@ -196,6 +220,7 @@ print("KNN testando na NLTK com KNN = 3")
 df = pd.read_csv('arquivoResultadoAtualizado.csv')
 
 # Pré-processamento dos dados
+comeca_contagem()
 vectorizer = CountVectorizer()
 X = vectorizer.fit_transform(df['texto'].values.astype('U'))
 y = df['sentimentoNLTK'].values
@@ -219,7 +244,7 @@ for i in range(num_repeticoes):
 
     print(f"Acurácia média da {i+1}ª repetição: {acuracia_media}")
 #    print(f"F1-score médio da {i+1}ª repetição: {f1_score_medio}")
-
+termina_contagem()
 
 
 print("--------------------------------------")
@@ -232,6 +257,7 @@ print("KNN testando na NLTK com KNN = 5")
 df = pd.read_csv('arquivoResultadoAtualizado.csv')
 
 # Pré-processamento dos dados
+comeca_contagem()
 vectorizer = CountVectorizer()
 X = vectorizer.fit_transform(df['texto'].values.astype('U'))
 y = df['sentimentoNLTK'].values
@@ -255,7 +281,7 @@ for i in range(num_repeticoes):
 
     print(f"Acurácia média da {i+1}ª repetição: {acuracia_media}")
 #    print(f"F1-score médio da {i+1}ª repetição: {f1_score_medio}")
-
+termina_contagem()
 
 print("--------------------------------------")
 
@@ -267,6 +293,7 @@ print("KNN testando na NLTK com KNN = 7")
 df = pd.read_csv('arquivoResultadoAtualizado.csv')
 
 # Pré-processamento dos dados
+comeca_contagem()
 vectorizer = CountVectorizer()
 X = vectorizer.fit_transform(df['texto'].values.astype('U'))
 y = df['sentimentoNLTK'].values
@@ -290,7 +317,7 @@ for i in range(num_repeticoes):
 
     print(f"Acurácia média da {i+1}ª repetição: {acuracia_media}")
 #    print(f"F1-score médio da {i+1}ª repetição: {f1_score_medio}")
-
+termina_contagem()
 
 print("--------------------------------------")
 print("Árvore de decisão")
@@ -303,6 +330,7 @@ print("Árvore de decisão para curadoria humana")
 df = pd.read_csv('arquivoResultadoAtualizado.csv')
 
 # Pré-processamento dos dados
+comeca_contagem()
 vectorizer = CountVectorizer()
 X = vectorizer.fit_transform(df['texto'].values.astype('U'))
 y = df['sentimento'].values
@@ -326,7 +354,7 @@ for i in range(num_repeticoes):
 
     print(f"Acurácia média da {i+1}ª repetição: {acuracia_media}")
 #    print(f"F1-score médio da {i+1}ª repetição: {f1_score_medio}")
-
+termina_contagem()
 
 
 print("--------------------------------------")
@@ -337,6 +365,7 @@ print("Árvore de decisão para NLTK")
 df = pd.read_csv('arquivoResultadoAtualizado.csv')
 
 # Pré-processamento dos dados
+comeca_contagem()
 vectorizer = CountVectorizer()
 X = vectorizer.fit_transform(df['texto'].values.astype('U'))
 y = df['sentimentoNLTK'].values
@@ -360,3 +389,4 @@ for i in range(num_repeticoes):
 
     print(f"Acurácia média da {i+1}ª repetição: {acuracia_media}")
 #    print(f"F1-score médio da {i+1}ª repetição: {f1_score_medio}")
+termina_contagem()
