@@ -172,3 +172,13 @@ Acurácia média da 5ª repetição: 0.9759429153924566
 #Tempo total de execução: 1679672089.7561336 segundos#
 ####################################################
 
+
+## Resultados
+
+Os resultados obtidos indicam que o algoritmo NaiveBayes apresentou acurácia média de 66,6% na base de dados de curadoria humana e de 88,1% na base da NLTK. Já o algoritmo KNN apresentou acurácias médias mais baixas, variando de 59,4% a 60,4% na base de curadoria humana e de 86,9% a 88,9% na base da NLTK, dependendo do valor escolhido para o parâmetro K.
+
+A árvore de decisão treinada com o NLTK obteve uma acurácia muito maior do que a árvore de decisão treinada com a curadoria humana. A acurácia média das repetições para a árvore de decisão do NLTK foi superior a 0,97, enquanto a árvore de decisão com curadoria humana teve uma acurácia média inferior a 0,60. É importante lembrar que a escolha da melhor opção de treinamento depende dos dados utilizados e dos objetivos do projeto. Em geral, o treinamento com dados curados por humanos é considerado mais preciso, mas pode exigir muito mais tempo e recursos. Já o treinamento com ferramentas como o NLTK pode ser mais rápido e escalável, mas pode exigir um esforço maior para a preparação dos dados e seleção dos parâmetros adequados.
+
+É importante destacar que o tempo de execução em segundos é o mesmo para todos os testes, o que sugere que não houve variação significativa no tempo de execução entre os classificadores e bases de dados utilizados.
+
+Vale lembrar que a escolha do algoritmo de classificação e dos parâmetros a serem utilizados pode depender do problema em questão e dos dados disponíveis, e que esses resultados podem não ser generalizáveis para outras aplicações.
