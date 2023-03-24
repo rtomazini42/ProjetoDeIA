@@ -9,14 +9,14 @@
 
 ##### Um relatório deve ser gerado de acordo com a especificação abaixo:
 * O relatório deve seguir o formato de um artigo acadêmico, em suas partes 
- 1. título 🪛
- 2. resumo 🪛
+ 1. título ✔️
+ 2. resumo ✔️
  3. introdução 🪛
  4. metodologia 🪛
  5. modelos apresentados 🪛
  6. análise experimental 🪛
- 7. conclusões 🪛
- 8. referências🪛
+ 7. conclusões ✔️
+ 8. referências ✔️
 
 * Deve-se descrever em detalhes o tipo de pré-processamento adotado para cada base de dados, justificando a escolha desse pré-processamento.  ✔️ 
 * Os resultados experimentais devem ser descritos de forma clara e concisa, de modo a justificarem-se as conclusões obtidas quanto aos modelos e problemas estudados. 🔨
