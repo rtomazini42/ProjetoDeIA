@@ -12,16 +12,16 @@
  1. título ✔️
  2. resumo ✔️
  3. introdução ✔️
- 4. metodologia 🔨
- 5. modelos apresentados 🔨
- 6. análise experimental 🔨
+ 4. metodologia ✔️
+ 5. modelos apresentados ✔️
+ 6. análise experimental ✔️
  7. conclusões ✔️
  8. referências ✔️
 
 * Deve-se descrever em detalhes o tipo de pré-processamento adotado para cada base de dados, justificando a escolha desse pré-processamento.  ✔️ 
 * Os resultados experimentais devem ser descritos de forma clara e concisa, de modo a justificarem-se as conclusões obtidas quanto aos modelos e problemas estudados. 🔨
-* Uma conclusão geral deve ser apresentada. 🔨
-* O artigo deve ser escrito fazendo-se uso do template da SBC para artigos (coluna única, artigo contendo entre 6 e 8 páginas). 🔨
+* Uma conclusão geral deve ser apresentada. ✔️
+* O artigo deve ser escrito fazendo-se uso do template da SBC para artigos (coluna única, artigo contendo entre 6 e 8 páginas). ✔️
 * Os códigos fonte comentados desenvolvidos. 🔨
 * As bases de dados originais e pré-processadas. ✔️
 * O slide da apresentação do projeto (em .pdf). ✔️
