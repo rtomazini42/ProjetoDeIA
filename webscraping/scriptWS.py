@@ -3,7 +3,7 @@ import os
 import csv
 
 # Definir as credenciais de acesso à API do Twitter
-bearer_token = "AAAAAAAAAAAAAAAAAAAAAOtTyQAAAAAAm%2Fg9kbOa8s%2BEq%2Fn5nWqlKE%2BLi90%3DRc0OO4DE8zbePyrHKIsV2etNFWZGBxU4YKuITJ46p0jcGHBjKy" 
+bearer_token = "" 
 #se vc for minha colega Lidiane pode me pedir o bearer_token. Se você for outra pessoa por favor vá causar prejuízos pra Big Techs e não pra gente.
 
 
